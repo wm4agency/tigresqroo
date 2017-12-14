@@ -116,15 +116,22 @@ p {
   word-break: break-word;
   word-wrap: break-word;
   -webkit-hyphens: none;
-  -ms-hyphens: none;
-      hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
   -webkit-hyphenate-before: 2;
   -webkit-hyphenate-after: 3;
   hyphenate-lines: 3;
   -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
   -ms-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig"; }
+
+html,
+body,
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300; }
 
 /******************************************************************
 Site Name:
@@ -211,13 +218,13 @@ NAVIGATION STYLES
     /* end current highlighters */ }
     .menu ul li {
       /*
-				plan your menus and drop-downs wisely.
-				*/ }
+      plan your menus and drop-downs wisely.
+      */ }
       .menu ul li a {
         /*
-					you can use hover styles here even though this size
-					has the possibility of being a mobile device.
-					*/ }
+        you can use hover styles here even though this size
+        has the possibility of being a mobile device.
+        */ }
 
 /* end .menu */
 /*********************
@@ -307,8 +314,8 @@ NAVIGATION STYLES
     float: left;
     list-style: none;
     /*
-		plan your menus and drop-downs wisely.
-		*/
+    plan your menus and drop-downs wisely.
+    */
     /* showing sub-menus */ }
     .nav li a {
       display: block;
@@ -317,9 +324,9 @@ NAVIGATION STYLES
       color: #fff;
       text-decoration: none;
       /*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/ }
+      you can use hover styles here even though this size
+      has the possibility of being a mobile device.
+      */ }
       .nav li a:hover, .nav li a:focus {
         color: #fff;
         text-decoration: underline; }
@@ -335,10 +342,10 @@ NAVIGATION STYLES
       .nav li ul.sub-menu li,
       .nav li ul.children li {
         /*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/ }
+        if you need to go deeper, go nuts
+        just remember deeper menus suck
+        for usability. k, bai.
+        */ }
         .nav li ul.sub-menu li a,
         .nav li ul.children li a {
           display: block;
@@ -377,12 +384,8 @@ so we've copied them here.
 /* no results search page */
 /* individual paged search (i.e. body.search-paged-3) */
 .error404 .search {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  justify-content: center; }
   .error404 .search .searchform {
     width: 45%;
     margin: 0; }
@@ -453,10 +456,10 @@ mobile. Make sure to double check these!
 */
 .footer-links ul li {
   /*
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/ }
+  be careful with the depth of your menus.
+  it's very rare to have multi-depth menus in
+  the footer.
+  */ }
 
 /* end .footer-links */
 /******************************************************************
@@ -495,3 +498,5 @@ header.php file to see what they are:
 .lt-ie8 .class { ... }
 
 */
+
+/*# sourceMappingURL=ie.css.map */
