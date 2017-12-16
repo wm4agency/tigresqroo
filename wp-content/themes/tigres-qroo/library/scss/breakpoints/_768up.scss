@@ -30,16 +30,11 @@ HEADER STYLES
 *********************/
 
 .header {
-
+	height: 110px;
 }
 
 	#logo {
-		position: relative;
-    	top: 3px;
-		display: inline-block;
-		margin-right: 1.5em;
-		padding: 1em 0;
-		width: 300px; // adjust for your logo
+
 		img {
 			display: block;
 		}

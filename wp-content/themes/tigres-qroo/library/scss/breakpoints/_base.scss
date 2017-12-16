@@ -12,6 +12,13 @@ only seen on tablets or desktops in the stylesheets targeted for
 those viewpoints.
 
 ******************************************************************/
+/*********************
+PROOFING Styles (comment out when finished)
+*********************/
+div{
+	padding: 1em;
+	border: 1px dashed white;
+}
 
 /*********************
 GENERAL STYLES
@@ -22,7 +29,7 @@ html {
 }
 
 body {
-	background-color: $gray;
+	background-color: $tiger_blue_lightest;
 	color: $text-color;
 	letter-spacing: -0.19px; // best for San Francisco font; adjust this for your typeface
 	font-size: 100%;
@@ -252,13 +259,13 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $sb-black;
+	background-color: $tiger_blue;
 }
 
 	#site-title {
 		margin: 1em 0;
 		font-size: 1.5em;
-		// display: none; 
+		// display: none;
 	}
 
 	#banner {
@@ -267,7 +274,27 @@ HEADER STYLES
 		}
 	}
 
-	#logo {}
+	#logo {
+		position: absolute;
+    top: 3px;
+		display: block;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 1em;
+		//padding: 1em 0;
+		width: 200px;
+		height: auto;// adjust for your logo
+
+		figcaption{
+			color: $tiger_orange;
+			text-transform: uppercase;
+			position: absolute;
+			bottom: 5px;
+			right: -80px;
+			font-size: 12px;
+			font-weight: 700;
+		}
+	}
 
 /*********************
 NAVIGATION STYLES
@@ -289,7 +316,7 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-
+	margin-bottom: 1em;
 }
 		.hentry {
 			padding-bottom: 1.5em;
@@ -921,8 +948,8 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $sb-dark-blue;
-	color: $light-gray;
+	background-color: $tiger_orange;
+	color: white;
 }
 
 	.footer-links {

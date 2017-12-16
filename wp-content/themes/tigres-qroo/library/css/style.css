@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* 
+/*
 * Made with Template by studio.bio
 * Based on Bones by Eddie Machado.
 * One love :)
@@ -91,6 +91,7 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -316,6 +317,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -351,6 +353,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -546,6 +549,7 @@ p {
   word-wrap: break-word;
   -webkit-hyphens: none;
   -moz-hyphens: none;
+  -ms-hyphens: none;
   hyphens: none;
   -webkit-hyphenate-before: 2;
   -webkit-hyphenate-after: 3;
@@ -699,31 +703,27 @@ them however you see fit.
     padding-right: 0.75em;
     width: 100%;
     padding-right: 0; }
-
   .m-1of2 {
     float: left;
     padding-right: 0.75em;
     width: 50%; }
-
   .m-1of3 {
     float: left;
     padding-right: 0.75em;
     width: 33.33%; }
-
   .m-2of3 {
     float: left;
     padding-right: 0.75em;
     width: 66.66%; }
-
   .m-1of4 {
     float: left;
     padding-right: 0.75em;
     width: 25%; }
-
   .m-3of4 {
     float: left;
     padding-right: 0.75em;
     width: 75%; } }
+
 /* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 1029px) {
   .t-all {
@@ -731,51 +731,43 @@ them however you see fit.
     padding-right: 0.75em;
     width: 100%;
     padding-right: 0; }
-
   .t-1of2 {
     float: left;
     padding-right: 0.75em;
     width: 50%; }
-
   .t-1of3 {
     float: left;
     padding-right: 0.75em;
     width: 33.33%; }
-
   .t-2of3 {
     float: left;
     padding-right: 0.75em;
     width: 66.66%; }
-
   .t-1of4 {
     float: left;
     padding-right: 0.75em;
     width: 25%; }
-
   .t-3of4 {
     float: left;
     padding-right: 0.75em;
     width: 75%; }
-
   .t-1of5 {
     float: left;
     padding-right: 0.75em;
     width: 20%; }
-
   .t-2of5 {
     float: left;
     padding-right: 0.75em;
     width: 40%; }
-
   .t-3of5 {
     float: left;
     padding-right: 0.75em;
     width: 60%; }
-
   .t-4of5 {
     float: left;
     padding-right: 0.75em;
     width: 80%; } }
+
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
   .d-all {
@@ -783,111 +775,91 @@ them however you see fit.
     padding-right: 0.75em;
     width: 100%;
     padding-right: 0; }
-
   .d-1of2 {
     float: left;
     padding-right: 0.75em;
     width: 50%; }
-
   .d-1of3 {
     float: left;
     padding-right: 0.75em;
     width: 33.33%; }
-
   .d-2of3 {
     float: left;
     padding-right: 0.75em;
     width: 66.66%; }
-
   .d-1of4 {
     float: left;
     padding-right: 0.75em;
     width: 25%; }
-
   .d-3of4 {
     float: left;
     padding-right: 0.75em;
     width: 75%; }
-
   .d-1of5 {
     float: left;
     padding-right: 0.75em;
     width: 20%; }
-
   .d-2of5 {
     float: left;
     padding-right: 0.75em;
     width: 40%; }
-
   .d-3of5 {
     float: left;
     padding-right: 0.75em;
     width: 60%; }
-
   .d-4of5 {
     float: left;
     padding-right: 0.75em;
     width: 80%; }
-
   .d-1of6 {
     float: left;
     padding-right: 0.75em;
     width: 16.6666666667%; }
-
   .d-1of7 {
     float: left;
     padding-right: 0.75em;
     width: 14.2857142857%; }
-
   .d-2of7 {
     float: left;
     padding-right: 0.75em;
     width: 28.5714286%; }
-
   .d-3of7 {
     float: left;
     padding-right: 0.75em;
     width: 42.8571429%; }
-
   .d-4of7 {
     float: left;
     padding-right: 0.75em;
     width: 57.1428572%; }
-
   .d-5of7 {
     float: left;
     padding-right: 0.75em;
     width: 71.4285715%; }
-
   .d-6of7 {
     float: left;
     padding-right: 0.75em;
     width: 85.7142857%; }
-
   .d-1of8 {
     float: left;
     padding-right: 0.75em;
     width: 12.5%; }
-
   .d-1of9 {
     float: left;
     padding-right: 0.75em;
     width: 11.1111111111%; }
-
   .d-1of10 {
     float: left;
     padding-right: 0.75em;
     width: 10%; }
-
   .d-1of11 {
     float: left;
     padding-right: 0.75em;
     width: 9.09090909091%; }
-
   .d-1of12 {
     float: left;
     padding-right: 0.75em;
     width: 8.33%; } }
+
 /*********************
 IMPORTING MODULES
 Modules are reusable blocks or elements we use throughout the project.
@@ -965,6 +937,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   cursor: pointer;
   margin-bottom: .5em;
   -webkit-transition: background-color 0.14s ease-in-out;
+  -o-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
   .blue-btn:hover, .comment-reply-link:hover, #submit:hover, button:hover, .purple-btn:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus, button:focus, .purple-btn:focus {
     color: #fff;
@@ -1043,6 +1016,7 @@ textarea,
   color: #3f3f3f;
   border-radius: 3px;
   vertical-align: middle;
+  -webkit-box-shadow: none;
   box-shadow: none;
   border: 0;
   width: 100%;
@@ -1050,6 +1024,7 @@ textarea,
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   background-color: #eaedf2;
   -webkit-transition: background-color 0.24s ease-in-out;
+  -o-transition: background-color 0.24s ease-in-out;
   transition: background-color 0.24s ease-in-out; }
   input[type="text"]:focus, input[type="text"]:active,
   input[type="password"]:focus,
@@ -1324,13 +1299,20 @@ those viewpoints.
 
 ******************************************************************/
 /*********************
+PROOFING Styles (comment out when finished)
+*********************/
+div {
+  padding: 1em;
+  border: 1px dashed white; }
+
+/*********************
 GENERAL STYLES
 *********************/
 html {
   font-size: 1em; }
 
 body {
-  background-color: #eaedf2;
+  background-color: #908ba3;
   color: #3f3f3f;
   letter-spacing: -0.19px;
   font-size: 100%;
@@ -1367,6 +1349,7 @@ style a page via class
   text-align: center; }
   .error404 .article-header h1 {
     margin-bottom: 0; }
+
 .error404 .entry-content {
   text-align: center; }
   .error404 .entry-content .hal {
@@ -1380,9 +1363,11 @@ style a page via class
       position: absolute;
       top: 50%;
       left: 50%;
+      -webkit-animation: glow 1.5s linear infinite alternate;
       animation: glow 1.5s linear infinite alternate; }
     .error404 .entry-content .hal img {
       margin-bottom: 0; }
+
 .error404 .search {
   display: block;
   padding: 1.5em;
@@ -1440,10 +1425,10 @@ a, a:visited {
     text-decoration: underline; }
   a:link, a:visited:link {
     /*
-    this highlights links on iPhones/iPads.
-    so it basically works like the :hover selector
-    for mobile devices.
-    */
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
 /******************************************************************
@@ -1465,9 +1450,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   line-height: 1.2;
   text-rendering: optimizelegibility;
   /*
-  if you're going to use webfonts, be sure to check your weights
-  http://css-tricks.com/watch-your-font-weight/
-  */
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
   /* removing text decoration from all headline links */ }
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
     text-decoration: none; }
@@ -1514,7 +1499,7 @@ ul, ol {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #111111; }
+  background-color: #211646; }
 
 #site-title {
   margin: 1em 0;
@@ -1522,6 +1507,26 @@ HEADER STYLES
 
 #banner .header-image {
   display: block; }
+
+#logo {
+  position: absolute;
+  top: 3px;
+  display: block;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 1em;
+  width: 200px;
+  height: auto; }
+  #logo figcaption {
+    color: #ff5000;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 5px;
+    right: -80px;
+    font-size: 12px;
+    font-weight: 700; }
 
 /*********************
 NAVIGATION STYLES
@@ -1539,6 +1544,9 @@ For your main navigation, styles are in 768up.scss.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+#content {
+  margin-bottom: 1em; }
+
 .hentry {
   padding-bottom: 1.5em;
   background-color: #fff; }
@@ -1574,11 +1582,11 @@ POSTS & CONTENT STYLES
 .entry-content {
   padding: 1.5em;
   /*
-  image alignment on a screen this size may be
-  a bit difficult. It's set to start aligning
-  and floating images at the next breakpoint,
-  but it's up to you. Feel free to change it up.
-  */ }
+			image alignment on a screen this size may be
+			a bit difficult. It's set to start aligning
+			and floating images at the next breakpoint,
+			but it's up to you. Feel free to change it up.
+			*/ }
   .entry-content p {
     margin: 0 0 1em; }
   .entry-content table {
@@ -1689,6 +1697,7 @@ SCREEN READER STYLES
   height: auto;
   border-radius: 3px;
   background-color: #f1f1f1;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   color: #21759b;
   text-decoration: none;
@@ -1745,6 +1754,7 @@ PAGE NAVI STYLES
 /* fallback previous & next links */
 .wp-prev-next .prev-link {
   float: left; }
+
 .wp-prev-next .next-link {
   float: right; }
 
@@ -1889,17 +1899,23 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #004466;
-  color: #f8f9fa; }
+  background-color: #ff5000;
+  color: white; }
 
 /* end .footer-links */
 /*********************
 CSS ANIMATION KEYFRAMES
 For the HAL 9000 404 error ;)
 *********************/
+@-webkit-keyframes glow {
+  to {
+    -webkit-box-shadow: 0px 0px 60px 20px #8d0005;
+    box-shadow: 0px 0px 60px 20px #8d0005; } }
 @keyframes glow {
   to {
+    -webkit-box-shadow: 0px 0px 60px 20px #8d0005;
     box-shadow: 0px 0px 60px 20px #8d0005; } }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -1908,30 +1924,30 @@ tweeners.
 *********************/
 @media only screen and (min-width: 481px) {
   /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: 481px and Up Stylesheet
-  
-  This stylesheet is loaded for larger devices. It's set to
-  481px because at 480px it would load on a landscaped iPhone.
-  This isn't ideal because then you would be loading all those
-  extra styles on that same mobile connection.
-  
-  A word of warning. This size COULD be a larger mobile device,
-  so you still want to keep it pretty light and simply expand
-  upon your base.scss styles.
-  
-  ******************************************************************/
+Site Name:
+Author:
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
   /*
-  IMPORTANT NOTE ABOUT SASS 3.3 & UP
-  You can't use @extend within media queries
-  anymore, so just be aware that if you drop
-  them in here, they won't work.
-  */
+IMPORTANT NOTE ABOUT SASS 3.3 & UP
+You can't use @extend within media queries
+anymore, so just be aware that if you drop
+them in here, they won't work.
+*/
   /*********************
-  NAVIGATION STYLES
-  *********************/
+NAVIGATION STYLES
+*********************/
   /* .menu is clearfixed inside mixins.scss */
   .menu {
     /* end .menu ul */ }
@@ -1941,18 +1957,17 @@ tweeners.
       /* end current highlighters */ }
       .menu ul li {
         /*
-        plan your menus and drop-downs wisely.
-        */ }
+				plan your menus and drop-downs wisely.
+				*/ }
         .menu ul li a {
           /*
-          you can use hover styles here even though this size
-          has the possibility of being a mobile device.
-          */ }
-
+					you can use hover styles here even though this size
+					has the possibility of being a mobile device.
+					*/ }
   /* end .menu */
   /*********************
-  POSTS & CONTENT STYLES
-  *********************/
+POSTS & CONTENT STYLES
+*********************/
   /* entry content */
   .entry-content {
     /* at this larger size, we can start to align images */ }
@@ -1972,16 +1987,16 @@ tweeners.
       display: block;
       clear: both;
       margin-top: 11px; }
-
   /* end .entry-content */
   /*********************
-  FOOTER STYLES
-  *********************/
+FOOTER STYLES
+*********************/
   /*
-  check your menus here. do they look good?
-  do they need tweaking?
-  */
+check your menus here. do they look good?
+do they need tweaking?
+*/
   /* end .footer-links */ }
+
 /*********************
 BELOW TABLET
 This is for everything that's below an iPad including mobile
@@ -1990,20 +2005,20 @@ compete with the base styles.
 *********************/
 @media only screen and (max-width: 767px) {
   /******************************************************************
-  Site Name: 
-  Author:
-  
-  Stylesheet: Below Tablet
-  
-  This stylesheet will show on devices smaller than an iPad or tablet.
-  Use this to add styles that will *only* show on mobile.
-  
-  I find it easier to do it this way than to have to override base styles.
-  
-  ******************************************************************/
+Site Name: 
+Author:
+
+Stylesheet: Below Tablet
+
+This stylesheet will show on devices smaller than an iPad or tablet.
+Use this to add styles that will *only* show on mobile.
+
+I find it easier to do it this way than to have to override base styles.
+
+******************************************************************/
   /*********************
-  NAVIGATION STYLES
-  *********************/
+NAVIGATION STYLES
+*********************/
   .nav {
     border-bottom: 0;
     margin: 0;
@@ -2014,10 +2029,10 @@ compete with the base styles.
     /* end current highlighters */ }
     .nav li {
       /* 
-      Are you really going to use drop-down menus for mobile?
-      Probably not. We almost always use the Responsive Menu
-      plugin: https://wordpress.org/plugins/responsive-menu/
-      */ }
+		Are you really going to use drop-down menus for mobile?
+		Probably not. We almost always use the Responsive Menu
+		plugin: https://wordpress.org/plugins/responsive-menu/
+		*/ }
       .nav li a {
         display: block;
         color: #fff;
@@ -2026,8 +2041,8 @@ compete with the base styles.
       .nav li ul.sub-menu li a,
       .nav li ul.children li a {
         padding-left: 30px; }
-
   /* end .nav */ }
+
 /*********************
 TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
@@ -2036,44 +2051,36 @@ you can add resource intensive styles.
 *********************/
 @media only screen and (min-width: 768px) {
   /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: Tablet & Small Desktop Stylesheet
-  
-  This stylesheet will be used for tablets and larger devices
-  like desktops. The grid starts working here and you can get
-  busy with more stylings.
-  
-  ******************************************************************/
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+This stylesheet will be used for tablets and larger devices
+like desktops. The grid starts working here and you can get
+busy with more stylings.
+
+******************************************************************/
   /*********************
-  GENERAL STYLES
-  *********************/
+GENERAL STYLES
+*********************/
   /*********************
-  LAYOUT & GRID STYLES
-  *********************/
+LAYOUT & GRID STYLES
+*********************/
   .wrap {
     width: 760px; }
-
   /*********************
-  HEADER STYLES
-  *********************/
-  #logo {
-    position: relative;
-    top: 3px;
-    display: inline-block;
-    margin-right: 1.5em;
-    padding: 1em 0;
-    width: 300px; }
-    #logo img {
-      display: block; }
-
+HEADER STYLES
+*********************/
+  .header {
+    height: 110px; }
+  #logo img {
+    display: block; }
   /*********************
-  NAVIGATION STYLES
-  *********************/
+NAVIGATION STYLES
+*********************/
   .header-nav {
     display: inline-block; }
-
   .nav {
     margin: 0;
     padding: 0;
@@ -2090,8 +2097,8 @@ you can add resource intensive styles.
       float: left;
       list-style: none;
       /*
-      plan your menus and drop-downs wisely.
-      */
+		plan your menus and drop-downs wisely.
+		*/
       /* showing sub-menus */ }
       .nav li a {
         display: block;
@@ -2100,9 +2107,9 @@ you can add resource intensive styles.
         color: #fff;
         text-decoration: none;
         /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/ }
         .nav li a:hover, .nav li a:focus {
           color: #fff;
           text-decoration: underline; }
@@ -2118,10 +2125,10 @@ you can add resource intensive styles.
         .nav li ul.sub-menu li,
         .nav li ul.children li {
           /*
-          if you need to go deeper, go nuts
-          just remember deeper menus suck
-          for usability. k, bai.
-          */ }
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/ }
           .nav li ul.sub-menu li a,
           .nav li ul.children li a {
             display: block;
@@ -2139,16 +2146,15 @@ you can add resource intensive styles.
       .nav li:hover > ul {
         top: auto;
         visibility: visible; }
-
   /* end .nav */
   /********************
-  WORDPRESS BODY CLASSES
-  style a page via class
-  ********************/
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
   /*
-  We like having these classes for use in iPad and larger devices
-  so we've copied them here.
-  */
+We like having these classes for use in iPad and larger devices
+so we've copied them here.
+*/
   /* for sites that are read right to left (i.e. hebrew) */
   /* home page */
   /* blog template page */
@@ -2160,12 +2166,17 @@ you can add resource intensive styles.
   /* no results search page */
   /* individual paged search (i.e. body.search-paged-3) */
   .error404 .search {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center; }
     .error404 .search .searchform {
       width: 45%;
       margin: 0; }
-
   /* 404 page */
   /* single post page */
   /* individual post page by id (i.e. body.postid-73) */
@@ -2192,15 +2203,13 @@ you can add resource intensive styles.
   /* paged items like search results or archives */
   /* individual paged (i.e. body.paged-3) */
   /*********************
-  SIDEBARS & ASIDES
-  *********************/
+SIDEBARS & ASIDES
+*********************/
   .sidebar {
     margin-top: 2.2em; }
-
   .widgettitle {
     margin-bottom: 0.75em;
     border-bottom: 2px solid #444; }
-
   .widget {
     margin: 2.2em 0;
     padding: 0 10px; }
@@ -2210,7 +2219,6 @@ you can add resource intensive styles.
       .widget ul li ul {
         margin-top: 0.75em;
         padding-left: 1em; }
-
   /* links widget */
   /* meta widget */
   /* pages widget */
@@ -2223,21 +2231,21 @@ you can add resource intensive styles.
   /* search widget */
   /* text widget */
   /*********************
-  FOOTER STYLES
-  *********************/
+FOOTER STYLES
+*********************/
   /*
-  you'll probably need to do quite a bit
-  of overriding here if you styled them for
-  mobile. Make sure to double check these!
-  */
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
   .footer-links ul li {
     /*
-    be careful with the depth of your menus.
-    it's very rare to have multi-depth menus in
-    the footer.
-    */ }
-
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/ }
   /* end .footer-links */ }
+
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
@@ -2246,32 +2254,34 @@ you can add resource intensive styles.
 *********************/
 @media only screen and (min-width: 1030px) {
   /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: Desktop Stylsheet
-  
-  This is the desktop size. It's larger than an iPad so it will only
-  be seen on the Desktop.
-  
-  ******************************************************************/
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
   .wrap {
     width: 1040px; } }
+
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *********************/
 @media only screen and (min-width: 1240px) {
   /******************************************************************
-  Site Name: 
-  Author: 
-  
-  Stylesheet: Super Large Monitor Stylesheet
-  
-  You can add some advanced styles here if you like. This kicks in
-  on larger screens like the 4K or 5K iMac.
-  
-  ******************************************************************/ }
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens like the 4K or 5K iMac.
+
+******************************************************************/ }
+
 /*********************
 PRINT STYLESHEET
 Feel free to customize this. Remember to add things that won't make
@@ -2280,23 +2290,23 @@ be set to display none.
 *********************/
 @media print {
   /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: Print Stylesheet
-  
-  This is the print stylesheet. There's probably not a lot
-  of reasons to edit this stylesheet. If you want to
-  though, go for it.
-  
-  ******************************************************************/
+Site Name:
+Author:
+
+Stylesheet: Print Stylesheet
+
+This is the print stylesheet. There's probably not a lot
+of reasons to edit this stylesheet. If you want to
+though, go for it.
+
+******************************************************************/
   * {
     background: transparent !important;
     color: black !important;
     text-shadow: none !important;
+    -webkit-filter: none !important;
     filter: none !important;
     -ms-filter: none !important; }
-
   a, a:visited {
     color: #444 !important;
     text-decoration: underline; }
@@ -2304,35 +2314,27 @@ be set to display none.
       content: " (" attr(href) ")"; }
     a abbr[title]:after, a:visited abbr[title]:after {
       content: " (" attr(title) ")"; }
-
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
-
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
-
   thead {
     display: table-header-group; }
-
   tr, img {
     page-break-inside: avoid; }
-
   img {
     max-width: 100% !important; }
-
   @page {
     margin: 0.5cm; }
   p, h2, h3 {
     orphans: 3;
     widows: 3; }
-
   h2,
   h3 {
     page-break-after: avoid; }
-
   .sidebar,
   .page-navigation,
   .wp-prev-next,

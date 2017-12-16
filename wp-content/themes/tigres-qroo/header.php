@@ -17,9 +17,9 @@
 		<meta name=viewport content="width=device-width, initial-scale=1">
 
 		<?php // https://sympli.io/blog/2017/02/15/heres-everything-you-need-to-know-about-favicons-in-2017/ ?>
-		<link rel="apple-touch-icon" href="older-iPhone.png"> <?php // 120px ?>  
-		<link rel="apple-touch-icon" sizes="180x180" href="iPhone-6-Plus.png">  
-		<link rel="apple-touch-icon" sizes="152x152" href="iPad-Retina.png">  
+		<link rel="apple-touch-icon" href="older-iPhone.png"> <?php // 120px ?>
+		<link rel="apple-touch-icon" sizes="180x180" href="iPhone-6-Plus.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="iPad-Retina.png">
 		<link rel="apple-touch-icon" sizes="167x167" href="iPad-Pro.png">
 
 		<?php // favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
@@ -52,14 +52,14 @@
 		<div id="container">
 
 			<?php // Customizer Header Image section. Uncomment to use. ?>
-				<!-- <?php if( get_header_image() != "" ) { 
+				<!-- <?php if( get_header_image() != "" ) {
 
 					if ( is_front_page() ) { ?>
 
-            		<div id="banner">                
-            			
-            			<img class="header-image" src="<?php header_image(); ?>" alt="Header graphic" />                
-            			
+            		<div id="banner">
+
+            			<img class="header-image" src="<?php header_image(); ?>" alt="Header graphic" />
+
             		</div>
 
             	<?php }
@@ -73,23 +73,30 @@
 					<?php // You can use text or a logo (or both) in your header. Uncomment the below to use text. ?>
 					<!-- <div id="site-title" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></div> -->
 
-					<div id="logo" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/template_logo.png" /></a></div>
+					<figure id="logo" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_site_url(); ?>/wp-content/uploads/Tigres_de_Quintana_Roo.svg" /><figcaption><?php bloginfo('description'); ?></figcaption></a></figure>
 
-					<nav class="header-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav class="header-nav left" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php // see all default args here: https://developer.wordpress.org/reference/functions/wp_nav_menu/ ?>
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'templatetheme' ),  // nav name
+    					         'menu' => __( 'Menú principal izquierdo', 'templatetheme' ),  // nav name
     					         'menu_class' => 'nav top-nav main-menu cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
+    					         'theme_location' => 'main-nav-left',                 // where it's located in the theme
 						)); ?>
 
 					</nav>
+					<nav class="header-nav right" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<?php // see all default args here: https://developer.wordpress.org/reference/functions/wp_nav_menu/ ?>
+						<?php wp_nav_menu(array(
+											 'container' => false,                           // remove nav container
+											 'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+											 'menu' => __( 'Menú principal derecho', 'templatetheme' ),  // nav name
+											 'menu_class' => 'nav top-nav main-menu cf',               // adding custom nav class
+											 'theme_location' => 'main-nav-right',                 // where it's located in the theme
+						)); ?>
 
-					<?php // if you'd like to use the site description un-comment the below <p></p>. If not, leave as-is or delete it. ?>
-					<!-- <p class="site-description"><?php bloginfo('description'); ?></p> -->
-
+					</nav>
 				</div>
 
 			</header>
