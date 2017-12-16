@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name: 
-Author: 
+Site Name:
+Author:
 
 Stylesheet: Typography
 
@@ -10,7 +10,7 @@ Stylesheet: Typography
 "Web design is 95% typography" — Oliver Reichenstein
 
 When that quote was made in 2006 it was before web fonts, auto-play video,
-and animated pop-ups so even if it is 65 or 75% today that is still *most* 
+and animated pop-ups so even if it is 65 or 75% today that is still *most*
 of any web site's design. Understanding some of the basics of typography
 (and web typography) will go a long way.
 
@@ -45,8 +45,8 @@ FONT FACE (IN YOUR FACE)
   on embedding fonts, go to:
   http://www.fontsquirrel.com/
   Be sure to remove the comment brackets.
-  
-  Also, you don't have to include a separate name for 
+
+  Also, you don't have to include a separate name for
   each font style...just use the same name and
   declare each style separately. See here:
   http://www.newnet-soft.com/blog/csstypography
@@ -70,14 +70,14 @@ FONT STACKS
 *********************/
 
 // Let's use OS system fonts and let the system do the work. We've included all the major desktop and mobile OS's.
-// See here: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/. 
+// See here: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/.
 
 $sans:        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 
 /*
- Commented out since WP uses system fonts now but if you can't let go I won't be upset. 
+ Commented out since WP uses system fonts now but if you can't let go I won't be upset.
 */
 // $open:              'Open Sans', $sans-serif;
 
@@ -114,3 +114,9 @@ p{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
 }
+
+.shadowed-text{
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+           }

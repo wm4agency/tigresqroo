@@ -1,5 +1,5 @@
 /*------------------------------------
- * Theme: Template by studio.bio 
+ * Theme: Template by studio.bio
  * File: Extra Scripts File
  * Author: Joshua Michaels
  * URI: https://studio.bio/template
@@ -7,12 +7,12 @@
  *
  * This file contains scripts that you might use (and might use often)
  * but we didn't want to weigh down the main scripts file hence they
- * are extra. 
+ * are extra.
  *
- * Still, at studio.bio we use a lot of these in almost every project 
- * so have a look and see what may work for you. 
+ * Still, at studio.bio we use a lot of these in almost every project
+ * so have a look and see what may work for you.
  *
- * To use these, copy what you need to the main scripts folder or 
+ * To use these, copy what you need to the main scripts folder or
  * conditionally load individual scripts on the page(s) you need.
 */
 
@@ -25,12 +25,12 @@
  *
  * Retina.js is an open source script that makes it easy to serve
  * high-resolution images to devices with retina displays.
- * 
+ *
  * Commented out by default as WordPress now has retina support built-in using srcset.
  * Yet, even with WP retina support, this catches images not uploaded through
  * the Media Library. There is a newer version but this is the last 1.X
  * version which works better.
- * 
+ *
  * Just have a second image at twice the size as your regular image
  * with '@2x' in the file name and in the same directory and retina.js just works.
  * Example: image.jpg, image@2x.jpg.

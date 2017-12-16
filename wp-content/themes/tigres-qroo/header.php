@@ -75,28 +75,21 @@
 
 					<figure id="logo" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_site_url(); ?>/wp-content/uploads/Tigres_de_Quintana_Roo.svg" /><figcaption><?php bloginfo('description'); ?></figcaption></a></figure>
 
-					<nav class="header-nav left" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav class="header-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php // see all default args here: https://developer.wordpress.org/reference/functions/wp_nav_menu/ ?>
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'Menú principal izquierdo', 'templatetheme' ),  // nav name
+    					         'menu' => __( 'The Main Menu', 'templatetheme' ),  // nav name
     					         'menu_class' => 'nav top-nav main-menu cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav-left',                 // where it's located in the theme
+    					         'theme_location' => 'main-nav',                 // where it's located in the theme
 						)); ?>
 
 					</nav>
-					<nav class="header-nav right" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-					<?php // see all default args here: https://developer.wordpress.org/reference/functions/wp_nav_menu/ ?>
-						<?php wp_nav_menu(array(
-											 'container' => false,                           // remove nav container
-											 'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-											 'menu' => __( 'Menú principal derecho', 'templatetheme' ),  // nav name
-											 'menu_class' => 'nav top-nav main-menu cf',               // adding custom nav class
-											 'theme_location' => 'main-nav-right',                 // where it's located in the theme
-						)); ?>
 
-					</nav>
+					<?php // if you'd like to use the site description un-comment the below <p></p>. If not, leave as-is or delete it. ?>
+					<!-- <p class="site-description"><?php bloginfo('description'); ?></p> -->
+
 				</div>
 
 			</header>

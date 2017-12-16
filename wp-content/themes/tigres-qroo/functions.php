@@ -1,13 +1,13 @@
 <?php
 /*------------------------------------
- * Theme: Template by studio.bio 
+ * Theme: Template by studio.bio
  * File: Main functions file
  * Author: Joshua Michaels
  * URI: https://studio.bio/template
  *------------------------------------
  *
  * We've moved all of the theme functions to this single
- * file to keep things tidy. 
+ * file to keep things tidy.
  *
  * Extra development and debugging functions can be found
  * in template.php. Uncomment the below require_once below.
@@ -18,7 +18,7 @@
 // LOAD TEMPLATE DEVELOPMENT FUNCTIONS (not required but helper stuff for debugging and development)
 // require_once( 'library/template.php' );
 
-// CUSTOMIZE THE WORDPRESS ADMIN 
+// CUSTOMIZE THE WORDPRESS ADMIN
 require_once( 'library/admin.php' );
 
 /*********************
@@ -230,7 +230,7 @@ http://www.longren.io/add-schema-org-markup-to-any-wordpress-theme/
 function html_schema() {
 
     $schema = 'http://schema.org/';
- 
+
     // Is single post
     if( is_single()) {
         $type = "Article";
@@ -247,7 +247,7 @@ function html_schema() {
      else {
         $type = 'WebPage';
     }
- 
+
     echo 'itemscope="itemscope" itemtype="' . $schema . $type . '"';
 }
 
@@ -343,7 +343,7 @@ function template_scripts_and_styles() {
     }
 
     //adding scripts file in the footer
-    wp_register_script( 'template-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+    wp_register_script( 'template-js', get_stylesheet_directory_uri() . '/library/js/min/scripts-min.js', array( 'jquery' ), '', true );
 
     // Template extra scripts. Uncomment to use. Or better yet, copy what you need to the main scripts folder or on the page(s) you need it
     // wp_register_script( 'template-extra-js', get_stylesheet_directory_uri() . '/library/js/extras/extra-scripts.js', array( 'jquery' ), '', true );
@@ -367,7 +367,7 @@ function template_scripts_and_styles() {
 ****************************************/
 
 // Remove emojis: because WordPress is serious business.
-// But, if you want emojis, don't let me stop you from having a good time. 
+// But, if you want emojis, don't let me stop you from having a good time.
 // To enable emojis, comment these functions out or just delete them.
 
 add_action( 'init', 'disable_wp_emojicons' );
@@ -431,7 +431,7 @@ function template_theme_support() {
   );
 
   // Custom Header Image
-  add_theme_support( 'custom-header', array( 
+  add_theme_support( 'custom-header', array(
     'default-image'          => get_template_directory_uri() . '/library/images/header-image.png',
       'default-text-color'     => 'ffffff',
       'header-text'            => true,
@@ -467,26 +467,26 @@ function template_theme_support() {
   add_theme_support( 'title-tag' );
 
   // Enable support for HTML5 markup.
-  add_theme_support( 'html5', array( 
-    'comment-list', 
-    'comment-form', 
-    'search-form', 
-    'gallery', 
-    'caption' ) 
+  add_theme_support( 'html5', array(
+    'comment-list',
+    'comment-form',
+    'search-form',
+    'gallery',
+    'caption' )
   );
 
   /* Post Formats
-  Ahhhh yes, the wild and wonderful world of Post Formats. 
+  Ahhhh yes, the wild and wonderful world of Post Formats.
   I've never really gotten into them but I could see some
   situations where they would come in handy. Here's a few
   examples: https://www.competethemes.com/blog/wordpress-post-format-examples/
 
-  This theme doesn't use post formats per se but we need this 
+  This theme doesn't use post formats per se but we need this
   to pass the theme check.
 
   We may add better support for post formats in the future.
 
-  If you want to use them in your project, do so by all means. 
+  If you want to use them in your project, do so by all means.
   We won't judge you.
   */
 
@@ -507,7 +507,7 @@ function template_theme_support() {
 } /* end template theme support */
 
 
-/* Add WooCommerce support. This function only removes the warning 
+/* Add WooCommerce support. This function only removes the warning
 in the WP admin when WooCommerce is installed. To fully support
 WooCommerce you will need to add some stuff to your product loops.
 See here: https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
@@ -528,35 +528,35 @@ function template_register_theme_customizer( $wp_customize ) {
 
   // Uncomment this to see what's going on if you make a lot of changes
   // echo '<pre>';
-  // var_dump( $wp_customize );  
+  // var_dump( $wp_customize );
   // echo '</pre>';
 
   // Customize title and tagline sections and labels
-  $wp_customize->get_section('title_tagline')->title = __('Site Name and Description', 'templatetheme');  
-  $wp_customize->get_control('blogname')->label = __('Site Name', 'templatetheme');  
-  $wp_customize->get_control('blogdescription')->label = __('Site Description', 'templatetheme');  
+  $wp_customize->get_section('title_tagline')->title = __('Site Name and Description', 'templatetheme');
+  $wp_customize->get_control('blogname')->label = __('Site Name', 'templatetheme');
+  $wp_customize->get_control('blogdescription')->label = __('Site Description', 'templatetheme');
   $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
   $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
   // Customize the Front Page Settings
   $wp_customize->get_section('static_front_page')->title = __('Homepage Preferences', 'templatetheme');
   $wp_customize->get_section('static_front_page')->priority = 20;
-  $wp_customize->get_control('show_on_front')->label = __('Choose Homepage Preference:', 'templatetheme');  
-  $wp_customize->get_control('page_on_front')->label = __('Select Homepage:', 'templatetheme');  
-  $wp_customize->get_control('page_for_posts')->label = __('Select Blog Homepage:', 'templatetheme');  
+  $wp_customize->get_control('show_on_front')->label = __('Choose Homepage Preference:', 'templatetheme');
+  $wp_customize->get_control('page_on_front')->label = __('Select Homepage:', 'templatetheme');
+  $wp_customize->get_control('page_for_posts')->label = __('Select Blog Homepage:', 'templatetheme');
 
   // Customize Background Settings
-  $wp_customize->get_section('background_image')->title = __('Background Styles', 'templatetheme');  
-  $wp_customize->get_control('background_color')->section = 'background_image'; 
+  $wp_customize->get_section('background_image')->title = __('Background Styles', 'templatetheme');
+  $wp_customize->get_control('background_color')->section = 'background_image';
 
-  // Customize Header Image Settings  
+  // Customize Header Image Settings
   $wp_customize->add_section( 'header_text_styles' , array(
-    'title'      => __('Header Text Styles','templatetheme'), 
-    'priority'   => 30    
+    'title'      => __('Header Text Styles','templatetheme'),
+    'priority'   => 30
   ) );
-  $wp_customize->get_control('display_header_text')->section = 'header_text_styles';  
-  $wp_customize->get_control('header_textcolor')->section = 'header_text_styles'; 
-  $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage'; 
+  $wp_customize->get_control('display_header_text')->section = 'header_text_styles';
+  $wp_customize->get_control('header_textcolor')->section = 'header_text_styles';
+  $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 }
 
@@ -584,19 +584,19 @@ function template_customizer_scripts() {
 function template_style_header() {
 
   $text_color = get_header_textcolor();
-  
+
   ?>
-  
+
   <style type="text/css">
 
     header.header .site-title a {
       color: #<?php echo esc_attr( $text_color ); ?>;
     }
-  
+
     <?php if(display_header_text() != true): ?>
     .site-title, .site-description {
       display: none;
-    } 
+    }
     <?php endif; ?>
 
     #banner .header-image {
@@ -609,7 +609,7 @@ function template_style_header() {
     }
 
   </style>
-  <?php 
+  <?php
 
 }
 
@@ -715,11 +715,11 @@ if (is_page()) {
 
             # Parent template name
             $parent_template = get_post_meta( $parent->ID, '_wp_page_template', true);
-            
+
             if ( !empty($parent_template) )
                 $classes[] = 'template-'.sanitize_html_class( str_replace( '.', '-', $parent_template ), '' );
         }
-        
+
         // If we *do* have an ancestors list, process it
         // http://codex.wordpress.org/Function_Reference/get_post_ancestors
         if ($parents = get_post_ancestors($post->ID)) {
@@ -731,7 +731,7 @@ if (is_page()) {
                 }
             }
         }
- 
+
         // Add the current page to our body class array
         $classes[] = "{$post->post_type}-{$post->post_name}";
     }

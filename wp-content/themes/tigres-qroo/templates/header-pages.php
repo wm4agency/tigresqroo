@@ -42,4 +42,4 @@
 
 ?>
 
-this is header pages
+<h1 style="color:green">this is header pages</h1>

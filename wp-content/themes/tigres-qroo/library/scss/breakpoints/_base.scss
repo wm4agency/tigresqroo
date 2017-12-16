@@ -16,8 +16,8 @@ those viewpoints.
 PROOFING Styles (comment out when finished)
 *********************/
 div{
-	padding: 1em;
-	border: 1px dashed white;
+	// padding: 1em;
+	// border: 1px dashed white;
 }
 
 /*********************
@@ -318,6 +318,11 @@ POSTS & CONTENT STYLES
 #content {
 	margin-bottom: 1em;
 }
+
+		#inner-content{
+			margin-top: 2em;
+		}
+
 		.hentry {
 			padding-bottom: 1.5em;
 			background-color: $white;
@@ -910,7 +915,9 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+		background-color: $tiger_blue_lightest;
+}
 
 	.widgettitle {}
 

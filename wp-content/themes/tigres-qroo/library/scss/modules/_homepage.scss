@@ -1,3 +1,80 @@
 #content.homepage{
   //background: transparent!important;
+  div.container{
+    //padding: 1em;
+    overflow: hidden;
+  }
+    section{
+      margin: 0.5em 0;
+
+      &#full-width-banner{
+        @include image-box();
+        min-width: 100%;
+        position: relative;
+        display: inline-block;
+
+        &::after{
+          display: block;
+          content: '';
+          padding-bottom: 15%;
+        }
+
+        .big-message{
+          position: absolute;
+          top: 50%;
+          transform: translate(50%,-50%);
+          right: 50%;
+        }
+
+      }
+
+    }
+
+    #main-info-section{
+      min-height:20em;
+
+      #impulso{
+        background-color: transparentize(white,0.5);
+        height:14em;
+        margin: 0;
+      }
+
+      #socials{
+        background-color: $tiger_orange;
+        @include chipped_corner(10px,$tiger_orange);
+        height:5em;
+        margin-top: 1em;
+      }
+
+      #slider{
+        //padding: 1em !important;
+
+        .my-slider{
+          height: 20em;
+          background: white;
+          min-width: 100%;
+
+          ul li{
+          background: $gray no-repeat center center;
+          background-size: cover;
+          height: 20em;
+          }
+        }
+
+      }
+
+      #notas-destacadas{
+        height: 20em;
+
+        .inner{
+          height: 100%;
+          background: $tiger_blue;
+          @include chipped_corner(10px,$tiger_blue);
+
+        }
+
+      }
+
+    }
+
 }

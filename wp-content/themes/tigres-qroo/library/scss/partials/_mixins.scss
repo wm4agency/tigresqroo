@@ -20,6 +20,19 @@ http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
 
 ******************************************************************/
 
+/*********************
+image-box
+*********************/
+@mixin image-box(){
+  background: $tiger_orange no-repeat fixed center;
+  background-size: cover;
+}
+
+@mixin chipped_corner($size,$color){
+  background: linear-gradient(315deg, transparent $size,$color 0) bottom right;
+}
+
+
 
 /*********************
 TRANSITION
@@ -137,10 +150,10 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 // - applies to: flex items
 // <integer>
 @mixin order($val) {
-  -webkit-box-ordinal-group: $val;  
-     -moz-box-ordinal-group: $val;     
-  	     -ms-flex-order: $val;     
-  	      -webkit-order: $val;  
+  -webkit-box-ordinal-group: $val;
+     -moz-box-ordinal-group: $val;
+  	     -ms-flex-order: $val;
+  	      -webkit-order: $val;
   		      order: $val;
 }
 
@@ -156,7 +169,7 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 // Flex shrink
 // - applies to: flex item shrink factor
-// <number> 
+// <number>
 @mixin flex-shrink($shrink) {
   -webkit-flex-shrink: $shrink;
      -moz-flex-shrink: $shrink;
@@ -167,7 +180,7 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 // Flex basis
 // - the initial main size of the flex item
 // - applies to: flex itemsnitial main size of the flex item
-// <width> 
+// <width>
 @mixin flex-basis($width) {
   -webkit-flex-basis: $width;
      -moz-flex-basis: $width;
@@ -177,7 +190,7 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 // Axis Alignment
 // - applies to: flex containers
-// flex-start | flex-end | center | space-between | space-around 
+// flex-start | flex-end | center | space-between | space-around
 @mixin justify-content($justify) {
   -webkit-justify-content: $justify;
      -moz-justify-content: $justify;
@@ -188,7 +201,7 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 // Packing Flex Lines
 // - applies to: multi-line flex containers
-// flex-start | flex-end | center | space-between | space-around | stretch 
+// flex-start | flex-end | center | space-between | space-around | stretch
 @mixin align-content($align) {
   -webkit-align-content: $align;
      -moz-align-content: $align;
@@ -198,7 +211,7 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 // Cross-axis Alignment
 // - applies to: flex containers
-// flex-start | flex-end | center | baseline | stretch 
+// flex-start | flex-end | center | baseline | stretch
 @mixin align-items($align) {
   -webkit-align-items: $align;
      -moz-align-items: $align;
@@ -208,7 +221,7 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 // Cross-axis Alignment
 // - applies to: flex items
-// auto | flex-start | flex-end | center | baseline | stretch 
+// auto | flex-start | flex-end | center | baseline | stretch
 @mixin align-self($align) {
   -webkit-align-self: $align;
      -moz-align-self: $align;

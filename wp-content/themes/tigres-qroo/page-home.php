@@ -9,7 +9,6 @@
 ?>
 
 <?php get_header(); ?>
-this is home
 			<div id="content" class="homepage">
 				<div id="inner-content" class="wrap cf">
 
